@@ -1,16 +1,16 @@
 {
 	"info": {
-		"_postman_id": "78355e51-cf4f-4267-b56d-0db2fbe028fa",
+		"_postman_id": "385e80fb-487d-4954-83e9-cfbdfdb26051",
 		"name": "CISTS - Challenge",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "16107511"
+		"_exporter_id": "37974053"
 	},
 	"item": [
 		{
 			"name": "CRUDs",
 			"item": [
 				{
-					"name": "Participante",
+					"name": "Participant",
 					"item": [
 						{
 							"name": "Create",
@@ -19,7 +19,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"nome\": \"Usuario1\",\n    \"idade\": 50,\n    \"genero\": \"Feminino\"\n}",
+									"raw": "{\n    \"name\": \"User1\",\n    \"age\": 50,\n    \"gender\": \"Female\"\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -27,13 +27,13 @@
 									}
 								},
 								"url": {
-									"raw": "{{BaseURL}}/crud/participante/save",
+									"raw": "{{BaseURL}}/crud/participant/save",
 									"host": [
 										"{{BaseURL}}"
 									],
 									"path": [
 										"crud",
-										"participante",
+										"participant",
 										"save"
 									]
 								}
@@ -46,13 +46,13 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{BaseURL}}/crud/participante/find/1",
+									"raw": "{{BaseURL}}/crud/participant/find/1",
 									"host": [
 										"{{BaseURL}}"
 									],
 									"path": [
 										"crud",
-										"participante",
+										"participant",
 										"find",
 										"1"
 									]
@@ -67,7 +67,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"id\": 1,\n    \"nome\": \"Usuario1 - Updated\",\n    \"idade\": 50,\n    \"genero\": \"Masculino\"\n}",
+									"raw": "{\n    \"id\": 1,\n    \"name\": \"User1 - Updated\",\n    \"age\": 50,\n    \"gender\": \"Male\"\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -75,13 +75,13 @@
 									}
 								},
 								"url": {
-									"raw": "{{BaseURL}}/crud/participante/update",
+									"raw": "{{BaseURL}}/crud/participant/update",
 									"host": [
 										"{{BaseURL}}"
 									],
 									"path": [
 										"crud",
-										"participante",
+										"participant",
 										"update"
 									]
 								}
@@ -94,13 +94,13 @@
 								"method": "DELETE",
 								"header": [],
 								"url": {
-									"raw": "{{BaseURL}}/crud/participante/delete/1",
+									"raw": "{{BaseURL}}/crud/participant/delete/1",
 									"host": [
 										"{{BaseURL}}"
 									],
 									"path": [
 										"crud",
-										"participante",
+										"participant",
 										"delete",
 										"1"
 									]
@@ -114,13 +114,13 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{BaseURL}}/crud/participante/find",
+									"raw": "{{BaseURL}}/crud/participant/find",
 									"host": [
 										"{{BaseURL}}"
 									],
 									"path": [
 										"crud",
-										"participante",
+										"participant",
 										"find"
 									]
 								}
@@ -130,7 +130,7 @@
 					]
 				},
 				{
-					"name": "Resposta",
+					"name": "Response",
 					"item": [
 						{
 							"name": "Create",
@@ -139,7 +139,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"participanteId\": 1,\n    \"dataResposta\": \"2023-10-19T09:36:33Z\",\n    \"pontuacaoTotalDepressao\": 2,\n    \"pontuacaoTotalAnsiedade\": 5,\n    \"pontuacaoTotalEstresse\": 13\n}",
+									"raw": "{\n    \"participantId\": 2,\n    \"responseDate\": \"2023-10-19T09:36:33Z\",\n    \"totalDepressionScore\": 2,\n    \"totalAnxietyScore\": 5,\n    \"totalStressScore\": 13\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -147,13 +147,13 @@
 									}
 								},
 								"url": {
-									"raw": "{{BaseURL}}/crud/resposta/save",
+									"raw": "{{BaseURL}}/crud/response/save",
 									"host": [
 										"{{BaseURL}}"
 									],
 									"path": [
 										"crud",
-										"resposta",
+										"response",
 										"save"
 									]
 								}
@@ -166,15 +166,15 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{BaseURL}}/crud/resposta/find/1",
+									"raw": "{{BaseURL}}/crud/response/find/5",
 									"host": [
 										"{{BaseURL}}"
 									],
 									"path": [
 										"crud",
-										"resposta",
+										"response",
 										"find",
-										"1"
+										"5"
 									]
 								}
 							},
@@ -187,7 +187,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"respostaId\": 1,\n    \"participanteId\": 1,\n    \"dataResposta\": \"2023-10-19T09:36:33Z\",\n    \"pontuacaoTotalAnsiedade\": 0,\n    \"pontuacaoTotalDepressao\": 0,\n    \"pontuacaoTotalEstresse\": 0\n}",
+									"raw": "{\n    \"responseId\": 1,\n    \"participantId\": 1,\n    \"responseDate\": \"2023-10-19T09:36:33Z\",\n    \"totalAnxietyScore\": 0,\n    \"totalDepressionScore\": 0,\n    \"totalStressScore\": 0\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -195,13 +195,13 @@
 									}
 								},
 								"url": {
-									"raw": "{{BaseURL}}/crud/resposta/update",
+									"raw": "{{BaseURL}}/crud/response/update",
 									"host": [
 										"{{BaseURL}}"
 									],
 									"path": [
 										"crud",
-										"resposta",
+										"response",
 										"update"
 									]
 								}
@@ -214,13 +214,13 @@
 								"method": "DELETE",
 								"header": [],
 								"url": {
-									"raw": "{{BaseURL}}/crud/resposta/delete/1",
+									"raw": "{{BaseURL}}/crud/response/delete/1",
 									"host": [
 										"{{BaseURL}}"
 									],
 									"path": [
 										"crud",
-										"resposta",
+										"response",
 										"delete",
 										"1"
 									]
@@ -234,13 +234,13 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{BaseURL}}/crud/resposta/find",
+									"raw": "{{BaseURL}}/crud/response/find",
 									"host": [
 										"{{BaseURL}}"
 									],
 									"path": [
 										"crud",
-										"resposta",
+										"response",
 										"find"
 									]
 								}
@@ -252,16 +252,16 @@
 			]
 		},
 		{
-			"name": "Requisitos",
+			"name": "Requirements",
 			"item": [
 				{
-					"name": "Etapa 4",
+					"name": "Step 4",
 					"request": {
 						"method": "POST",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"participanteId\": 1,\n    \"dataResposta\": \"2023-10-19T09:36:33Z\",\n    \"pontuacaoTotalDepressao\": 3,\n    \"pontuacaoTotalAnsiedade\": 4,\n    \"pontuacaoTotalEstresse\": 14\n}",
+							"raw": "{\n    \"participantId\": 1,\n    \"responseDate\": \"2023-10-19T09:36:33Z\",\n    \"totalDepressionScore\": 3,\n    \"totalAnxietyScore\": 4,\n    \"totalStressScore\": 14\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -269,44 +269,44 @@
 							}
 						},
 						"url": {
-							"raw": "{{BaseURL}}/requisitos/e4",
+							"raw": "{{BaseURL}}/requirements/s4",
 							"host": [
 								"{{BaseURL}}"
 							],
 							"path": [
-								"requisitos",
-								"e4"
+								"requirements",
+								"s4"
 							]
 						}
 					},
 					"response": []
 				},
 				{
-					"name": "Etapa 5",
+					"name": "Step 5",
 					"request": {
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{BaseURL}}/requisitos/e5",
+							"raw": "{{BaseURL}}/requirements/step5",
 							"host": [
 								"{{BaseURL}}"
 							],
 							"path": [
-								"requisitos",
-								"e5"
+								"requirements",
+								"step5"
 							]
 						}
 					},
 					"response": []
 				},
 				{
-					"name": "Etapa 6",
+					"name": "Step 6",
 					"request": {
 						"method": "PUT",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"participanteId\": 1,\n    \"nome\": \"Usuario1 - Updated\",\n    \"idade\": 19,\n    \"genero\": \"Masculino\",\n    \"respostas\": [\n        {\n            \"respostaId\": 1,\n            \"dataResposta\": \"2023-10-19T09:36:33Z\",\n            \"pontuacaoTotalAnsiedade\": 10,\n            \"pontuacaoTotalDepressao\": 10,\n            \"pontuacaoTotalEstresse\": 10\n        }\n    ]\n}",
+							"raw": "{\n    \"participantId\": 1,\n    \"name\": \"User1 - Updated\",\n    \"age\": 19,\n    \"gender\": \"Male\",\n    \"responses\": [\n        {\n            \"responseId\": 1,\n            \"responseDate\": \"2023-10-19T09:36:33Z\",\n            \"totalAnxietyScore\": 10,\n            \"totalDepressionScore\": 10,\n            \"totalStressScore\": 10\n        }\n    ]\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -314,31 +314,31 @@
 							}
 						},
 						"url": {
-							"raw": "{{BaseURL}}/requisitos/e6",
+							"raw": "{{BaseURL}}/requirements/s6",
 							"host": [
 								"{{BaseURL}}"
 							],
 							"path": [
-								"requisitos",
-								"e6"
+								"requirements",
+								"s6"
 							]
 						}
 					},
 					"response": []
 				},
 				{
-					"name": "Etapa 7",
+					"name": "Step 7",
 					"request": {
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{BaseURL}}/requisitos/e7/1",
+							"raw": "{{BaseURL}}/requirements/s7/1",
 							"host": [
 								"{{BaseURL}}"
 							],
 							"path": [
-								"requisitos",
-								"e7",
+								"requirements",
+								"s7",
 								"1"
 							]
 						}
